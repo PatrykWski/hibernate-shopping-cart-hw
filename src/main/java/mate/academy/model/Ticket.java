@@ -20,4 +20,24 @@ public class Ticket {
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinColumn(name = "user_id")
     private User user;
+
+    public Long getId() {
+        return id;
+    }
+
+    public MovieSession getMovieSession() {
+        return movieSession;
+    }
+
+    public void setMovieSession(MovieSession movieSession) {
+        this.movieSession = movieSession;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
